@@ -16,8 +16,6 @@
     - Como será aplicado MVC nos projetos
     - Verificando se todos os alunos têm Java instalados, auxiliando instalação caso não.
     
-    ⚠`Tarefa próxima aula, trazer java configurado`
-    
 - 3º Aula - Projeto Calculadora
     - Criando o projeto, apenas log no console das operações - Calculadora
     - Fork do projeto
