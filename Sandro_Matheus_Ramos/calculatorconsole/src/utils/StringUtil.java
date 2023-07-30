@@ -1,4 +1,4 @@
-package Sandro_Matheus_Ramos.calculator_console.src.utils;
+package Sandro_Matheus_Ramos.calculatorconsole.src.utils;
 
 public class StringUtil {
     

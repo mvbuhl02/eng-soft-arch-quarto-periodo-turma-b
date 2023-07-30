@@ -1,10 +1,10 @@
-package Sandro_Matheus_Ramos.calculator_console.src.service;
+package Sandro_Matheus_Ramos.calculatorconsole.src.service;
 
 import java.util.List;
 import java.util.Scanner;
 
-import Sandro_Matheus_Ramos.calculator_console.src.enums.EnumUserOption;
-import Sandro_Matheus_Ramos.calculator_console.src.utils.StringUtil;
+import Sandro_Matheus_Ramos.calculatorconsole.src.enums.EnumUserOption;
+import Sandro_Matheus_Ramos.calculatorconsole.src.utils.StringUtil;
 
 public class MenuService {
 

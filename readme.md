@@ -74,9 +74,10 @@
 
 ![Fork_pt_03](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-b/assets/61207420/23b2c306-cacb-4439-aa72-28eb3c8efad3)
 
-4º ⚠ATENÇÃO⚠ Irá fazer o clone do repositorio localmente, adicionar uma pasta com **SEU NOME** e irá adicionar outra pasta com o projeto `calculadora_console`, IRÁ fazer o **commit** para o repositorio com as suas alterações, ficando como a imagem abaixo
+### 4º ⚠ATENÇÃO⚠ - Criar pasta com Snake Case 
+Irá fazer o clone do repositorio localmente, adicionar uma pasta com **SEU_NOME**, isso mesmo com snake case, exemplo "Roberto_Faria", e irá adicionar outra pasta com o projeto `calculadoraconsole` com um arquivo dentro, IRÁ fazer o **commit** para o repositorio com as suas alterações, ficando como a imagem abaixo
 
-![Fork_pt_04](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-b/assets/61207420/621c9adc-dbb6-49dd-a1c1-d28b4b0730bd)
+![Fork_pt_04](https://github.com/Sandrolaxx/eng-soft-poo-terceiro-periodo/assets/61207420/3cb2f88e-8474-4458-9bb8-9ca0ddbb4962)
 
 5º Irá iniciar a abertura do pull request
 

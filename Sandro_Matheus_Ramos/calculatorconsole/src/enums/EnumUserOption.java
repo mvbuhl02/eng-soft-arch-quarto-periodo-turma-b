@@ -1,4 +1,4 @@
-package Sandro_Matheus_Ramos.calculator_console.src.enums;
+package Sandro_Matheus_Ramos.calculatorconsole.src.enums;
 
 public enum EnumUserOption {
 
