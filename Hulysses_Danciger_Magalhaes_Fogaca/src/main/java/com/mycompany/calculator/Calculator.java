@@ -1,13 +1,5 @@
 package com.mycompany.calculator;
 
-/**
- *
- * @author hulys
- */
-public class Calculator {
-
-    package com.mycompany.calculator;
-
 import java.util.Scanner;
 
 /**
