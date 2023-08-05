@@ -64,6 +64,8 @@ public class Calculator {
                 System.out.println(" TOTAL = " + result);
             }    
             
+             answer = new Scanner(System.in);
+            
             System.out.println("\n  Deseje realizar um novo cálculo (s/n)? ");
             action = answer.nextLine();
         
