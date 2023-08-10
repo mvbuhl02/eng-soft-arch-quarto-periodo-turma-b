@@ -24,15 +24,19 @@ public class Calculadora {
                 case "+":
                     operacao = new Soma();
                     break;
+                    
                 case "-":
                     operacao = new Sub();
                     break;
+                    
                 case "*":
                     operacao = new Mult();
                     break;
+                    
                 case "/":
                     operacao = new Div();
                     break;
+                    
                 default:
                     System.out.println("Operador inválido");
                     return;
