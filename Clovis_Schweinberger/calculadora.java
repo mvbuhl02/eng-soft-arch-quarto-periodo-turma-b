@@ -100,4 +100,4 @@ class Raiz implements OperacaoMatematica {
             throw new IllegalArgumentException("Não é possível calcular a raiz com expoente zero!");
         }
     }
-}
+};
