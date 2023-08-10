@@ -1,0 +1,16 @@
+package calculadora;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Numeros valores = new Numeros();
+		Adicao soma = new Adicao();
+		Subtracao subtrair = new Subtracao();
+		Multiplicacao multiplicar = new Multiplicacao();
+		Divisao dividir = new Divisao();
+		
+		valores.calculo();
+		
+		
+	}
+}
