@@ -1,7 +1,6 @@
 package com.devdojo.calculadora;
 
 public class Mult implements Calculo{
-    @Override
     public double calcular(double pnum, double snum) {
         return pnum * snum;
     }
