@@ -1,0 +1,8 @@
+package calculadora;
+
+public class Adicao implements OperacaoMatematica{
+	 
+	public void calculo() {
+		Numeros.setResultado(Numeros.getValor1() + Numeros.getValor2());	
+	}
+}
