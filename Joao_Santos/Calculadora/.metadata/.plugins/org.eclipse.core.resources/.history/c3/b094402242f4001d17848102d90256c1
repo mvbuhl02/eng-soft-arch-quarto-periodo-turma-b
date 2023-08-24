@@ -1,6 +1,0 @@
-package Calculadora;
-
-public interface OperacaoMatematica {
-	
-	public void calculo();
-}
