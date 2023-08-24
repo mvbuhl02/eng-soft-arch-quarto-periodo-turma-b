@@ -1,8 +1,0 @@
-package Calculadora;
-
-public class Multiplicacao implements OperacaoMatematica{
-	 
-	public void calculo() {
-		Numeros.setResultado(Numeros.getValor1() * Numeros.getValor2());	
-	}
-}
