@@ -10,7 +10,7 @@ import jakarta.ws.rs.core.MediaType;
 
 import static java.util.Objects.requireNonNull;
 
-@Path("/some-page")
+@Path("/calculadora")
 public class SomePage {
 
     private final Template page;
@@ -21,8 +21,14 @@ public class SomePage {
 
     @GET
     @Produces(MediaType.TEXT_HTML)
-    public TemplateInstance get(@QueryParam("name") String name) {
-        return page.data("name", name);
+    public TemplateInstance get(@QueryParam("val1") Double valor1,
+    @QueryParam("val2") Double valor2) {
+        System.out.println(valor1);
+        System.out.println(valor2);
+
+        return page.data("valor1", "20");
+        
+        
     }
 
 }
