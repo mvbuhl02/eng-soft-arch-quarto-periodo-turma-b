@@ -21,8 +21,10 @@ public class SomePage {
 
     @GET
     @Produces(MediaType.TEXT_HTML)
-    public TemplateInstance get(@QueryParam("name") String name) {
-        return page.data("name", name);
+    public TemplateInstance get(@QueryParam("val1") Double val1, @QueryParam("val2") Double val2) {
+        System.out.println(val1+val2);
+        
+        return page.data("name", "Jonas");
     }
 
 }
