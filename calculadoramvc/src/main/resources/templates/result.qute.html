@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Calculadora MVC</title>
-    <style>
+  <meta charset="UTF-8">
+  <title>Calculadora MVC</title>
+  <style>
             body {
                 margin: 0;
                 padding: 0;
@@ -82,22 +82,14 @@
         </style>
 </head>
 <body>
-<form action="/result" method="get">
-    <div class = box>
-        <div class = calculadora>
-            <p>Informe o primeiro número</p>
-            <input type="number" name="val1" required></input>
-            <p>Informe o segundo número</p>
-            <input type="number" name="val2" required></input>
-            <select name="operador">
-                <option value="soma">Soma</option>
-                <option value="subtracao">Subtração</option>
-                <option value="multiplicacao">Multiplicação</option>
-                <option value="divisao">Divisão</option>
-            </select>
-            <button>Calcular</button>
-        </div>
+<form action="/calculator" method="get">
+  <div class = box>
+    <div class = calculadora>
+      <p>Calculadora do Qute</p>
+      <h3>Resultado: {resultadoOperacao}</h3>
+      <button>Voltar</button>
     </div>
+  </div>
 </form>
 </body>
 </html>
