@@ -10,19 +10,20 @@ import jakarta.ws.rs.core.MediaType;
 
 import static java.util.Objects.requireNonNull;
 
-@Path("/some-page")
-public class SomePage {
+@Path("/calculadora")
+public class Calcular {
 
     private final Template page;
 
-    public SomePage(Template page) {
+    public Calcular(Template page) {
         this.page = requireNonNull(page, "page is required");
     }
 
     @GET
     @Produces(MediaType.TEXT_HTML)
-    public TemplateInstance get(@QueryParam("name") String name) {
-        return page.data("name", name);
+    public TemplateInstance get(@QueryParam("resultado") String result) {
+        return page.data("result", null);
     }
 
 }
+
