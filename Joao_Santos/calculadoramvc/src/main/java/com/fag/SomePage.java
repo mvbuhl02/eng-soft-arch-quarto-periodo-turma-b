@@ -10,7 +10,7 @@ import jakarta.ws.rs.core.MediaType;
 
 import static java.util.Objects.requireNonNull;
 
-@Path("/1234")
+@Path("/joaovs")
 public class SomePage {
 
     private final Template page;
@@ -24,5 +24,4 @@ public class SomePage {
     public TemplateInstance get(@QueryParam("name") String name) {
         return page.data("name", name);
     }
-
 }

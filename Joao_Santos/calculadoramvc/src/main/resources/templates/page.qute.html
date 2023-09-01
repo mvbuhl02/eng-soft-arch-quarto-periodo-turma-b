@@ -18,13 +18,33 @@
         }
 
         p {
+            font-size: 40px;
+        }
+
+        .valores{
             font-size: 2vw;
         }
+
     </style>
 </head>
 <body>
-<h1>Hello <b>{name ?: "Qute"}</b></h1>
+<h1>RESULTADO: <b>{name ?: "Quarkus."}</b></h1>
 
-<p>Create your web page using Quarkus RESTEasy & Qute</p>
+<p>Insira dois valores, um em cada campo de digitação.<br>
+    Escolha a operação que deseja realizar. <br>
+    Clique em CALCULAR para que a operação seja feita.
+</p>
+
+<form action="" method="get" class="calculadora">
+    <div class="valores">
+      <label for="valor1">Informe o primeiro valor: </label>
+      <input type="number" name="valor1" id="valor1" required /> <br>
+      <label for="valor2">Informe o segundo valor: </label>
+      <input type="number" name="valor2" id="valor2" required /> 
+    <div class="submit">
+      <input type="submit" value="CALCULAR" />
+    </div>
+  </form>
+  
 </body>
 </html>
