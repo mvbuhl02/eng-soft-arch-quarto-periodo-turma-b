@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Hello {name ?: "Qute"}</title>
-    <style>
+<style>
         body {
-            background-color: #000;
-            color: #fff;
+            background-image: linear-gradient(45deg,black, rgba(255, 255, 255, 0.329));
+            height: 100vh;
+            color: azure;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
         }
-        h1 {
-            color: #4695EB;
-            font-size: 6vw;
+        #calculadora {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            background-color: rgb(31,31,31);
+            border-radius: 15px;
+            padding: 15px;
         }
-
-        h1 b {
-            color: #be9100;
+        #res {
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            cursor: pointer;
+            background-color: rgb(31,31,31);
+            border: none;
+            color: white;
         }
-
-        p {
-            font-size: 2vw;
+        .botao {
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            cursor: pointer;
+            background-color: rgb(31,31,31);
+            border: none;
+            color: white;
         }
     </style>
-</head>
-<body>
-<h1>Hello <b>{name ?: "Qute"}</b></h1>
-
-<p>Create your web page using Quarkus RESTEasy & Qute</p>
-</body>
+    <section id="calculadora">
+        <label id="result"></label>
+        <input type="number"><br>
+        <input type="number">
+        <div>
+            <select name="escolha a operação">
+                <option value="addition">Somar</option>
+                <option value="subtraction">Subtrair</option>
+                <option value="division">Dividir</option>
+                <option value="multiplication">Multipicar</option>                
+            </select>
+        </div>
+    </section>
 </html>
