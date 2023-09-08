@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello {name ?: "Qute"}</title>
+    </head>
+    
+    <style>
+
+body {
+    background-color: #222;
+    color: #ecf0f1;
+    font-family: "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 48px;
+    padding: 20px;
+    text-align: center;
+}
+
+#calculator-form {
+    background-color: rgba(41, 41, 49, 0.933);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #e74c3c;
+}
+
+input[type="number"], select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #95a5a6;
+    border-radius: 3px;
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+button[type="submit"] {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+h2 {
+    color: #e74c3c;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p.error-message {
+    color: #e74c3c;
+}
+
+   </style>
+</head>
+<body>
+    <h1>Calculadora Web</h1>
+
+    <form id="calculator-form" action="/calculadora/calculate" method="POST">
+        <label for="first-value">Primeiro Valor:</label>
+        <input type="number" id="first-value" name="firstValue" required><br><br>
+        <label for="second-value">Segundo Valor:</label>
+        <input type="number" id="second-value" name="secondValue" required><br><br>
+        
+        <label for="operation">Operação:</label>
+        <select id="operation" name="operation" required>
+            <option value="add">Somar</option>
+            <option value="subtract">Subtrair</option>
+            <option value="multiply">Multiplicar</option>
+            <option value="divide">Dividir</option>
+        </select><br><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    <h2>Resultado:</h2>
+    <p>{result}</p>
+
+    
+        <p style="color: red;">{errorMessage}</p>
+   
+
+</body>
+</html>
