@@ -2,42 +2,43 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Hello {name ?: "Qute"}</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Hello <b>{name ?: "Qute"}</b></h1>
 
-<p>Create your web page using Quarkus RESTEasy & Qute</p>
-
-    <div id="box">
-
-    <h1>Calculadora Simples</h1>
-    <form action="/calculator" method="post">
-        <label for="number1">Número 1:</label>
-        <input type="number" id="number1" name="number1" required>
-        <br>
-
-        <label for="number2">Número 2:</label>
-        <input type="number" id="number2" name="number2" required>
-        <br>
-
-        <label for="operation">Operação:</label>
-        <select id="operation" name="operation">
-            <option value="add">Adição (+)</option>
-            <option value="subtract">Subtração (-)</option>
-            <option value="multiply">Multiplicação (*)</option>
-            <option value="divide">Divisão (/)</option>
-        </select>
-        <br>
-
-        <button id="mandar" type="submit">Calcular</button>
-    </form>
-
-    <h2>Resultado:</h2>
-    <h2>{result}</h2>
+    <div class="container">
+        <div id="box">
+            <form action="/some-page" method="post">
+                <label for="number1">Insira o primeiro número</label>
+                <br>
+                <input class="buttons" type="number" id="number1" name="number1" required>
+                <br>
+                <br>
+                <label for="number2">Insira o segundo número</label>
+                <br>
+                <input class="buttons" type="number" id="number2" name="number2" required>
+                <br>
+                <br>
+                <select class="buttons" id="operation" name="operation">
+                    <option value="add">Soma</option>
+                    <option value="sub">Subtração</option>
+                    <option value="multi">Multiplicação</option>
+                    <option value="divi">Divisão</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <button id="mandar" type="submit">Calcular</button>
+            </form>
+        </div>
+    
+        <div id="boxh">
+            <h2>Resultado é {result}</h2>
+            <button id="voltar" type="button">Voltar</button>
+        </div>
     </div>
+    
 
+    
 
 </body>
 
@@ -45,29 +46,130 @@
 
 body{
 
-    background-color: rgb(28, 28, 28);
+    background-image: linear-gradient(to right, rgb(255, 24, 136), white);
+    margin: 0px;
 
+}
+
+#boxh{
+
+    display: none;
+    border-radius: 1vmin;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    padding: 7vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 
 }
 
 #box{
 
-position: absolute;
-background-color: rgb(44, 44, 44);
-border-radius: 1vmin;
+    display: block;
+    border-radius: 1vmin;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    padding: 7vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 
 
 }
 
-#mandar{
+#mandar, #voltar{
 
-    
+    border-radius: 10px;
+    padding: 10px;
+    border-width: 1px;
+    width: 100%;
 
 
 }
 
+.buttons{
+
+    border-radius: 10px;
+    padding: 10px;
+    border-width: 1px;
+    width: 100%;
+
+}
+
+.container{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+label, h2{
+
+    color: purple;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
 
 </style>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const boxDiv = document.getElementById("box");
+    const boxhDiv = document.getElementById("boxh");
+    let result = null; // Adicione uma variável para armazenar o resultado
+
+    
+
+    form.addEventListener("submit", async function (event) {
+        event.preventDefault(); // Evita o envio do formulário
+
+        const formData = new FormData(form);
+        const formBody = new URLSearchParams(formData).toString();
+
+        const response = await fetch("/some-page", {
+            method: "POST",
+            body: formBody,
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        });
+
+        if (response.ok) {
+            result = await response.text(); // Atualize o valor da variável result
+            console.log(`Novo valor de result: ${result}`); // Adicione um log para depuração
+            const resultElement = document.querySelector("#boxh h2");
+            resultElement.textContent = `Resultado é ${result}`;
+            boxDiv.style.display = "none";
+            boxhDiv.style.display = "block";
+        }
+
+    });
+
+    // Lidar com o botão "Voltar"
+    const voltarButton = document.getElementById("voltar");
+    voltarButton.addEventListener("click", function () {
+        boxDiv.style.display = "block";
+        boxhDiv.style.display = "none";
+    });
+});
+
+
+</script>
+    
+    
+    
 
 </html>
