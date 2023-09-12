@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Hian, Sandro</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #FF5733, #FFBD33, #33FF57, #339BFF, #B633FF);
+            background-size: 400% 400%;
+            animation: gradient 15s linear infinite;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator {
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .calculator h2 {
+            color: #333;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #0078D7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0050B4;
+        }
+
+        #resultado {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculadora HIAN Sandro</h2>
+        <form method="POST" action="/calculadora" enctype="application/x-www-form-urlencoded">
+
+            <input type="number" id="numero1" name="numero1" placeholder="Número 1">
+            <input type="number" id="numero2" name="numero2" placeholder="Número 2">
+            <select id="operacao" name="operacao">
+                <option value="adicao">Adição</option>
+                <option value="subtracao">Subtração</option>
+                <option value="multiplicacao">Multiplicação</option>
+                <option value="divisao">Divisão</option>
+            </select>
+            <button type="submit">Calcular</button>
+        </form>
+        <p id="resultado">{resultado}</p>
+    </div>
+</body>
+</html>
+
