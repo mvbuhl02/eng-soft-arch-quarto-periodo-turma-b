@@ -53,7 +53,7 @@ body{
 
 #boxh{
 
-    display: none;
+    visibility: visible;
     border-radius: 1vmin;
     width: 300px;
     height: 300px;
@@ -126,15 +126,13 @@ label, h2{
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    const boxDiv = document.getElementById("box");
-    const boxhDiv = document.getElementById("boxh");
-    let result = null; // Adicione uma variável para armazenar o resultado
-
+        const form = document.querySelector("form");
+        const boxDiv = document.getElementById("box");
+        const boxhDiv = document.getElementById("boxh");
+        let result = null; // Inicialize a variável result com null
     
-
-    form.addEventListener("submit", async function (event) {
-        event.preventDefault(); // Evita o envio do formulário
+        form.addEventListener("submit", async function (event) {
+        //event.preventDefault(); // Evita o envio padrão do formulário
 
         const formData = new FormData(form);
         const formBody = new URLSearchParams(formData).toString();
@@ -148,26 +146,31 @@ label, h2{
         });
 
         if (response.ok) {
-            result = await response.text(); // Atualize o valor da variável result
-            console.log(`Novo valor de result: ${result}`); // Adicione um log para depuração
-            const resultElement = document.querySelector("#boxh h2");
-            resultElement.textContent = `Resultado é ${result}`;
-            boxDiv.style.display = "none";
-            boxhDiv.style.display = "block";
+            
+            result = await response.text();
+            console.log(`Novo valor de result: ${result}`);
+            
+            
         }
 
+        
+
     });
 
-    // Lidar com o botão "Voltar"
-    const voltarButton = document.getElementById("voltar");
-    voltarButton.addEventListener("click", function () {
-        boxDiv.style.display = "block";
-        boxhDiv.style.display = "none";
+
+    
+        // Lidar com o botão "Voltar"
+        const voltarButton = document.getElementById("voltar");
+        voltarButton.addEventListener("click", function () {
+            
+            boxDiv.style.visibility = "visible";
+            boxhDiv.style.visibility = "hidden";
+            
+            
+        });
     });
-});
-
-
-</script>
+    </script>
+    
     
     
     
