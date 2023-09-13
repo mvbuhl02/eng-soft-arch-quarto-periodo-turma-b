@@ -2,25 +2,34 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Hello {name ?: "Qute"}</title>
 </head>
 <body>
-    <div class= "quadrado" class=""><h1 class="txtcalculadora">Calculadora</h1></div>
+    <form action="/calculadora/calculate" method="post">
+        <div class= "quadrado" ><h1 class="txtcalculadora">Calculadora</h1></div>
 
-    <div class="cssinput1">
-        <label for="numero1"></label>
-        <input type="number" id="numero1" max="100">
-    </div>
+        <div class="cssinput1">
+            <label for="numero1">Digite o primeiro valor:</label>
+            <input type="text" name="numero1" max="100" placeholder="Número 1"><br>
+        </div>
 
-    <div class="cssinput2">
-        <label id="teste" for="numero2">Digite o segundo valor:</label>
-        <input type="number" id="numero2" max="100">
-    </div>
+        <div class="cssinput2">
+            <label id="teste" for="numero2">Digite o segundo valor:</label>
+            <input type="text" name="numero2" max="100" placeholder="Número 2"><br>
+        </div>
 
-    <div class="buttons">
-        <button id="calcular">Calcular</button>
-    </div>
+        <select name="operation" class="operacao">
+            <option value="add">Somar</option>
+            <option value="subtract">Subtrair</option>
+            <option value="multiply">Multiplicar</option>
+            <option value="divide">Dividir</option>
+        </select><br>   
 
+
+        <div class="buttons">
+            <input type="submit" value= "Calcular">
+        </div>
+
+    </form>
     <style>
         body {
             background: rgb(2,0,36);
@@ -72,6 +81,13 @@
             transform: translate(-50%, 350%);
 
 
+        }
+        .operacao {
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 200%);
+            color: #000000;
         }
     </style>
 </body>
