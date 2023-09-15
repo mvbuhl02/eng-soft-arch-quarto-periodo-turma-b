@@ -97,19 +97,19 @@
 </head>
 <body>
     <div id="calculadora">
-        <form id="form">
+        <form id="form" method="post" action="/resultado">
             <img src="https://i.imgur.com/RwqQtcy.png" alt="Logo Eng. Software Fag">
             <label id="label">Insira o primeiro número</label>
-            <input type="text" id="input">
+            <input type="text" id="input" name="num1">
             <label id="label">Insira o segundo número</label>
-            <input type="text" id="input">
-            <select name="operacao" id="opc">
-                <option value="adiçao">Adiçao</option>
-                <option value="subtração">Subtração</option>
-                <option value="multiplicação">Multiplicação</option>
-                <option value="divisão">Divisão</option>
+            <input type="text" id="input" name="num2">
+            <select name="operador" id="opc">
+                <option value="adicao">Adiçao</option>
+                <option value="subtraçao">Subtração</option>
+                <option value="multiplicaçao">Multiplicação</option>
+                <option value="divisao">Divisão</option>
             </select>
-            <input type="submit" value="Calcular" id="calcular"/>
+            <button type="submit" id="calcular">Calcular</button>
         </form>
     </div>
 </body>
