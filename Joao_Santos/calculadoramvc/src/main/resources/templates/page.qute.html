@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Hello {name ?: "Qute"}</title>
+    <title>Hello</title>
     <style>
         body {
             background-color: #000;
             color: #fff;
         }
+
         h1 {
             color: #4695EB;
             font-size: 6vw;
@@ -18,33 +20,37 @@
         }
 
         p {
-            font-size: 40px;
-        }
-
-        .valores{
             font-size: 2vw;
         }
-
     </style>
 </head>
+
 <body>
-<h1>RESULTADO: <b>{name ?: "Quarkus."}</b></h1>
+    <h1>Resultado <b>{resultado ?: "Insira os valores"}</b></h1>
 
-<p>Insira dois valores, um em cada campo de digitação.<br>
-    Escolha a operação que deseja realizar. <br>
-    Clique em CALCULAR para que a operação seja feita.
-</p>
+    <p>Insira os valores abaixo para realizar o cálculo desejado</p>
 
-<form action="" method="get" class="calculadora">
-    <div class="valores">
-      <label for="valor1">Informe o primeiro valor: </label>
-      <input type="number" name="valor1" id="valor1" required /> <br>
-      <label for="valor2">Informe o segundo valor: </label>
-      <input type="number" name="valor2" id="valor2" required /> 
-    <div class="submit">
-      <input type="submit" value="CALCULAR" />
-    </div>
-  </form>
-  
+    <form action="/calculadora" method="post">
+        <label for="valor1">Digite o primeiro valor:</label>
+        <input type="number" id="valor1" name="valor1">
+        </br>
+        </br>
+        <label for="valor2">Digite o segundo valor:</label>
+        <input type="number" id="valor2" name="valor2">
+        </br>
+        </br>
+        <select name="operador">
+            <option>Soma</option>
+            <option>Sub</option>
+            <option>Mult</option>
+            <option>Div</option>
+        </select>
+        </br>
+        </br>
+        <button type="submit">
+            Calcular
+        </button>
+    </form>
 </body>
+
 </html>
