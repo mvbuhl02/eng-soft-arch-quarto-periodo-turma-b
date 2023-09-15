@@ -41,15 +41,42 @@ public class CalculadoraControler {
     @POST
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance calculate(@FormParam("valor1") Double val1,
-    @FormParam("valor2") Double val2) {
+    @FormParam("valor2") Double val2, @FormParam("opcao") String option) {
 
-        return page.data("result", services.addition(val1, val2));
+        Double resultado = 0d;
 
-        return page.data("result", services.subtraction(val1, val2));
+        switch (option) {
+            case "addition":    
+            resultado = services.addition(val1, val2);
+                
+                break;
+            
+             case "subtraction":    
+            resultado = services.subtraction(val1, val2);
+                
+                break;
+
+             case "division":    
+            resultado = services.division(val1, val2);
+                
+                break;
+
+             case "multiplication":    
+            resultado = services.multiplication(val1, val2);
+                
+                break;
+        
+            default:
+                break;
+        }
+
+        return page.data("result", resultado);
+
+      /*  return page.data("result", services.subtraction(val1, val2));
 
         return page.data("result", services.division(val1, val2));
 
-        return page.data("result", services.multiplication(val1, val2));
+        return page.data("result", services.multiplication(val1, val2));*/
 
     }
 }
