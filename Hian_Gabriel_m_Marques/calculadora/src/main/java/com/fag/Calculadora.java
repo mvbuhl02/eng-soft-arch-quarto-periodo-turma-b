@@ -30,8 +30,8 @@ public class Calculadora {
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public TemplateInstance calcular(@FormParam("numero1") double numero1,
-                                     @FormParam("numero2") double numero2,
-                                     @FormParam("operacao") String operacao) {
+            @FormParam("numero2") double numero2,
+            @FormParam("operacao") String operacao) {
         Map<String, Object> data = new HashMap<>();
         double resultado;
 
