@@ -44,18 +44,24 @@ public class CalculadoraController {
         switch (operador){
 
         case "Soma":
-        resultado = valor1 + valor2;
-        break;
-        case "Sub":
-        resultado = valor1 - valor2;
-        break;
-        case "Mult":
-        resultado = valor1 * valor2;
-        break;
-        case "Div":
-        resultado = valor1 / valor2;
-        break;
+            resultado = valor1 + valor2;
+            break;
 
+        case "Subtração":
+            resultado = valor1 - valor2;
+            break;
+
+        case "Multiplicação":
+            resultado = valor1 * valor2;
+            break;
+
+        case "Divisão":
+            if (valor2 != 0) {
+                resultado = valor1 / valor2;
+            }else {
+                resultado = 0;
+            }
+            break;
         }
 
         return page.data("resultado", resultado);
