@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Visual calculadora</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            width: 200px;
+            margin: 2px;
+        }
+        button,h3{
+            margin: 2px;
+        }
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+    <div id=calc>
+        <div id="main">
+            <h1 style="display: flex;justify-content: center; margin: 2px;">Calculadora</h1>
+            <input type="number" id="valor1"> primeiro valor <br>
+            <input type="number" id="valor2"> segundo valor <br>
+            <h3>selecione a operação</h3>
+            <button>Adição</button><button>Subtração</button><button>Multiplicação</button><button>divisão</button>
+            <br>
+            <button style="width: 150px; margin: 2px; color: blue;" onclick="calcular()">calcular</button>
+    </div>
+</body>
+</html>
