@@ -39,7 +39,7 @@
 
         form {
             width: 350px;
-            background-color: rgb(9, 73, 36);
+            background-color: #094924;
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -85,7 +85,7 @@
         </div>
 
         <div>
-            <input name="valor1">
+            <input type="number" name="valor1" required>
         </div>
 
         <div>
@@ -94,7 +94,7 @@
             </label>
         </div>
         <div>
-            <input name="valor2">
+            <input type="number" name="valor2" required>
         </div>
 
         <br>
@@ -125,10 +125,6 @@
         <div>
             <h3>Mensagem: <b>{mensagem ?: "Insira um número"}</h3>
         </div>
-        <div class="result">
-            <h2>Resultado: <b>{resultado ?: "0"} </h2>
-        </div>
-
     </form>
 </body>
 

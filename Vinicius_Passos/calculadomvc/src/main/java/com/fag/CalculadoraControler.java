@@ -17,10 +17,15 @@ import com.fag.Services.Sinal;
 
 @Path("/CalculadoraControler")
 public class CalculadoraControler {
-    private final Template page;
 
-    public CalculadoraControler(Template page) {
+    private final Template page;
+    private final Template page_result;
+    private final Template error;
+
+    public CalculadoraControler(Template page, Template page_result, Template error) {
         this.page = requireNonNull(page, "page is required");
+        this.page_result = requireNonNull(page_result, "page is required");
+        this.error = requireNonNull(error, "page is required");
     }
 
     @GET
@@ -40,9 +45,9 @@ public class CalculadoraControler {
         resultado = sinal.calcular(valor1, valor2, opcao);
 
         if (resultado == null) {
-            return page.data("resultado", null, "mensagem", "Não pode divisão por 0");
+            return error.data("mensagem", "Não pode divisão por 0");
         }
-        return page.data("resultado", resultado, "mensagem", "Calculado com sucesso");
+        return page_result.data( "mensagem", "Calculado com sucesso","valor1",valor1,"opcao",opcao,"valor2", valor2,"resultado", resultado); 
     }
 
 }
