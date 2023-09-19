@@ -1,30 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Hello {name ?: "Qute"}</title>
+    <title>Calculadora</title>
     <style>
         body {
-            background-color: #000;
+            background-color: #746c6c;
             color: #fff;
+            align-items: center;
         }
+
         h1 {
-            color: #4695EB;
+            color: #be9100;
             font-size: 6vw;
         }
 
-        h1 b {
+        h3 b {
             color: #be9100;
         }
 
         p {
             font-size: 2vw;
         }
+
+        .table-responsive {
+            width: 100% !important;
+        }
+
+        .table {
+            border: 1px solid red;
+            width: 50% !important;
+            margin: auto;
+        }
+
+        .table-status {
+            margin-top: 20px;
+            margin-bottom: 20px !important;
+        }
     </style>
 </head>
-<body>
-<h1>Hello <b>{name ?: "Qute"}</b></h1>
 
-<p>Create your web page using Quarkus RESTEasy & Qute</p>
+<body>
+    <table align="center">
+        <tr aria-rowspan="3">
+            <td>
+                <h3>Resultado: <b>{resultado ?: ""}</b></h3>
+            </td>
+        </tr>
+        <form action="/calcular" method="post">
+            <tr>
+                <td>
+                    <label>
+                        Primeiro Número:
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        Op:
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        Segundo Número:
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="valor1" />
+                </td>
+                <td>
+                    <select name="opcao">
+                        <option>+</option>
+                        <option>-</option>
+                        <option>*</option>
+                        <option>/</option>
+                    </select>
+                </td>
+                <td>
+                    <input name="valor2" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td aria-rowspan="2" align="right">
+                    <button type="submit">Calcular</button>
+                </td>
+            </tr>
+        </form>
+    </table>
 </body>
+
 </html>
