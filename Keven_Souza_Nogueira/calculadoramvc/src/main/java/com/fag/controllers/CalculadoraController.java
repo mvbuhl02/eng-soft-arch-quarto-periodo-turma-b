@@ -29,17 +29,6 @@ public class CalculadoraController {
 
         return page.data("resultado", null);
     }
-
-    // @POST
-    // @Produces(MediaType.TEXT_HTML)
-    // public TemplateInstance Calculador(
-    //         @FormParam("valor1") Double valor1,
-    //         @FormParam("valor2") Double valor2,
-    //         @FormParam("opcao") String opcao) {
-    //     CalculadoraService servico = new CalculadoraService();
-    //     double resultado = servico.calc(valor1, valor2, opcao);
-    //     return page.data("resultado", resultado);
-    // }
     @POST
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance Calculador(
