@@ -15,8 +15,8 @@ import java.util.List;
 
 import com.calculadora.models.CalculadoraModel;
 
-@Path("/calculadora")
-public class CalculadoraController {
+@Path("/resultado")
+public class ResultadoController {
 
     private final Template page;
     private final List<String> operations = List.of("+", "-", "*", "/");
@@ -24,7 +24,7 @@ public class CalculadoraController {
     double result;
 
     @Inject
-    public CalculadoraController(Template page) {
+    public ResultadoController(Template page) {
         this.page = page;
     }
 
@@ -37,10 +37,9 @@ public class CalculadoraController {
     @POST
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance calculadora(@FormParam("op") String operacao, @FormParam("valor1") double valor1, @FormParam("valor2") double valor2) {
-        
 
         this.result = calc.calculadora(operacao, valor1, valor2);
 
-        return page.data("resultado", this.result);
+        return page.data("resultado", this.result).data("res1", "none").data("res2", "block");
     }
 }
