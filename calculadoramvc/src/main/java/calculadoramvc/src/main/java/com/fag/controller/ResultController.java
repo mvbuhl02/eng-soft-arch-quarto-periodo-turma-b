@@ -1,7 +1,10 @@
-package calculadoramvc.src.main.java.com.fag;
+package calculadoramvc.src.main.java.com.fag.controller;
 
+import calculadoramvc.src.main.java.com.fag.model.Resultado;
+import calculadoramvc.src.main.java.com.fag.service.ResultadoService;
 import io.quarkus.qute.Template;
 import io.quarkus.qute.TemplateInstance;
+import jakarta.inject.Inject;
 import jakarta.ws.rs.BadRequestException;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.FormParam;
@@ -16,7 +19,8 @@ import jakarta.ws.rs.core.MediaType;
 import static java.util.Objects.requireNonNull;
 @Path("/result")
 public class ResultController {
-
+    @Inject
+    ResultadoService resultadoService;
     private final Template result;
 
     public ResultController(Template result) {
@@ -47,7 +51,9 @@ public class ResultController {
             default:
                 throw new BadRequestException("Operação inválida");
         }
-
+        Resultado resultado = new Resultado();
+        resultado.setResultado(resultadoOperacao);
+        resultadoService.salvar(resultado);
         return result.instance().data("resultadoOperacao", resultadoOperacao);
     }
 }

@@ -1,4 +1,4 @@
-package calculadoramvc.src.main.java.com.fag;
+package calculadoramvc.src.main.java.com.fag.controller;
 import io.quarkus.qute.Template;
 import io.quarkus.qute.TemplateInstance;
 import jakarta.ws.rs.BadRequestException;
