@@ -13,9 +13,11 @@ import jakarta.ws.rs.core.MediaType;
 
 import java.util.List;
 
+import org.acme.models.CalculadoraModel;
+
 @Path("/calculadora")
 public class CalculadoraController {
-
+    CalculadoraModel calculadora = new CalculadoraModel();
     private final Template page;
     private final List<String> operations = List.of("+", "-", "*", "/");
 
@@ -32,24 +34,10 @@ public class CalculadoraController {
 
     @POST
     @Produces(MediaType.TEXT_HTML)
-    public TemplateInstance calcular(@FormParam("valor1") double valor1, @FormParam("valor2") double valor2, @FormParam("operacao") String operacao) {
-        double resultado = 0.0;
-
-        switch (operacao) {
-            case "+":
-                resultado = valor1 + valor2;
-                break;
-            case "-":
-                resultado = valor1 - valor2;
-                break;
-            case "*":
-                resultado = valor1 * valor2;
-                break;
-            case "/":
-                resultado = (valor2 != 0) ? valor1 / valor2 : 0;
-                break;
-        }
-
+    public TemplateInstance calcular(@FormParam("valor1") Double valor1, @FormParam("valor2") Double valor2, @FormParam("operacao") String operacao) {
+        Double resultado = 0.0;
+    
+        resultado=calculadora.calcular(operacao, valor1,valor2);
         return page.data("resultado", resultado);
     }
 }
