@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <style>
+        body {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(229, 41, 145, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        }
+
+        .box {
+
+            background-color: #F0F8FF;
+            max-width: 250px;
+            border-radius: 15px;
+        }
+
+        select,
+        button {
+            font-size: 10px;
+            width: 170px;
+        }
+
+        h2,
+        label {
+            font-size: 10px;
+            font-family: arial;
+            color: #CE11EF;
+            position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="/result">
+        <div class="box">
+            <label> Insira o primeiro número </label>
+            <br>
+            <input type="text" name="valor1">
+            <br>
+            <br>
+            <label> Insira o segundo número </label>
+            <br>
+            <input type="text" name="valor2">
+            <br><br>
+            <select id="operador" name="operador">
+                <option value="soma"> Soma </option>
+                <option value="substracao"> Subtração </option>
+                <option value="divisao"> Divisão </option>
+                <option value="multiplicacao"> Multiplicação</option>
+            </select>
+            <br><br>
+            <button>Calcular</button>
+        </div>
+
+    </form>
+
+
+    <p>Create your web page using Quarkus RESTEasy & Qute</p>
+</body>
+
+</html>

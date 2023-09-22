@@ -1,6 +1,6 @@
 package org.acme.controller;
 
-import org.jboss.resteasy.spi.BadRequestException;
+import jakarta.ws.rs.BadRequestException;
 
 public class CalculadoraService {
 
