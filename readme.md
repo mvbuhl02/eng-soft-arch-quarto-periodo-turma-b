@@ -1,5 +1,7 @@
 ## 🏗Projeto de Arquitetura de Software
 
+<video src="https://github-production-user-asset-6210df.s3.amazonaws.com/61207420/270204104-510cf61e-5705-4677-9322-8cca86526258.mp4" width="320" height="240" controls></video>
+
 ### Comandos do GIT
 
 IMPORTANTE ESTAR com o GITBASH NA PASTA DO REPO(eng-soft-poo-terceiro-periodo)

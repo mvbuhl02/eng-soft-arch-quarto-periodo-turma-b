@@ -28,12 +28,10 @@ public class ResultadoController {
             @FormParam("operador") String operador) {
 
         CalculadoraService service = new CalculadoraService();
-        System.out.println(valor1);
-        System.out.println(valor2);
         Double result = service.calcular(valor1, valor2, operador);
 
         System.out.println(result);
-        System.out.println(operador);
+        
         return resultado.data("result", result);
 
     }

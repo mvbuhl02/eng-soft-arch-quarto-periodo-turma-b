@@ -19,7 +19,9 @@ import com.services.CalculadoraService;
 
 @Path("/some-page")
 public class SomePage {
+    
     boolean warn = false;
+
     @Inject
     CalculadoraService service;
     List<String> operacoes = List.of("Soma", "Subtracao", "Multiplicacao", "Divisao");
@@ -30,7 +32,7 @@ public class SomePage {
     public SomePage(Template page, Template result) {
         this.page = requireNonNull(page, "page is required");
         this.result = requireNonNull(result, "page is required");
-        
+
     }
 
     @GET
@@ -50,7 +52,7 @@ public class SomePage {
         if (opcao.equals("Soma")) {
             warn = false;
             resultado = service.soma(valor1, valor2);
-            System.out.println(valor1+""+ valor2);
+            System.out.println(valor1 + "" + valor2);
         } else if (opcao.equals("Subtracao")) {
             warn = false;
             resultado = service.subtracao(valor1, valor2);
@@ -65,15 +67,10 @@ public class SomePage {
                 resultado = service.divisao(valor1, valor2);
             }
         }
-        
-        
+
         return result.data("result", resultado)
                 .data("opcao", opcao)
                 .data("warn", warn);
-
-        //TamplateInstace = resultadoFinal.getResult();
-
     }
 
 }
-//Oi
