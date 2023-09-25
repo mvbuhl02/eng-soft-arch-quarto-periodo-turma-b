@@ -12,7 +12,7 @@ public class CalculadoraService {
             case "substracao":
                 return valor1 - valor2;
             case "divisao":
-                return  valor1 / valor2;
+                return  valor1 != 0 ? valor1 / valor2 : 0;
             case "multiplicacao":
                 return valor1 * valor2;
             default:

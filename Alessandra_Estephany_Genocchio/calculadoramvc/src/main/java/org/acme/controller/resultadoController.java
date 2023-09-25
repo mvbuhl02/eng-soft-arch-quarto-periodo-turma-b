@@ -24,7 +24,8 @@ public class ResultadoController {
             @FormParam("valor2") double valor2,
             @FormParam("operador") String operador) {
         CalculadoraService service = new CalculadoraService();
-        double resultadoOperacao = service.realizarCalculo(valor1, valor2, operador);
+        double resultadoOperacao = 0.0;
+        resultadoOperacao = service.realizarCalculo(valor1, valor2, operador);
 
         return resultado.data("result", resultadoOperacao);
     }
