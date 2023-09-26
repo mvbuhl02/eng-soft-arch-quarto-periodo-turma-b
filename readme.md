@@ -18,8 +18,8 @@ Hian Gabriel Moreira Marques -  Tacou um gradiente animado sinistro, o usuário 
 Pode clicar na imagem abaixo para ver o vídeo👇
 [![Vídeo do gradient](https://github-production-user-asset-6210df.s3.amazonaws.com/61207420/270214589-0dc6dc04-bd5b-4c58-9055-6130f4cf3a59.png)](https://github-production-user-asset-6210df.s3.amazonaws.com/61207420/270204104-510cf61e-5705-4677-9322-8cca86526258.mp4)
 
-Alessandra Estephany Genocchio - Perto to alvo🎯
-![Captura de tela de 2023-09-26 01-49-01](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-b/assets/61207420/cc737a1e-9940-4982-a7f4-1b9c29d9d9a4)
+Alessandra Estephany Genocchio - Perto to alvo🎯[
+![Captura de tela de 2023-09-26 01-49-01]()](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-b/assets/61207420/24e22081-6587-48b7-a7cc-ba84b750e1b1)
 
 Lucas Rodrigo Leal Lopes - Duende Verde🎃
 ![LucasLealLopes](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-c/assets/61207420/afa216c3-570b-4346-b8a1-3d19786b75d4)
