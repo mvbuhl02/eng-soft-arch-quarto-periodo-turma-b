@@ -2,7 +2,7 @@
 
 ### Destaques do Repo✨
 
-**Abaixo estão os 8 trabalhos de alunos que fizeram tanto um front quanto um back-end bonito.**
+**Abaixo estão os 9 trabalhos de alunos que fizeram tanto um front quanto um back-end bonito.**
 
 Gustavo Kraemer - Único que fez o desafio extra da persistência, maluco fez no postgres ainda🔥
 ![gustavo_kraemer](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-c/assets/61207420/2da51ac0-282f-4a10-acb1-7ff35d389825)
@@ -17,6 +17,9 @@ Gabriel Augusto Mahl - O cara refez o layout original, brabo😎
 Hian Gabriel Moreira Marques -  Tacou um gradiente animado sinistro, o usuário com epilepsia vai curtir🤣...
 Pode clicar na imagem abaixo para ver o vídeo👇
 [![Vídeo do gradient](https://github-production-user-asset-6210df.s3.amazonaws.com/61207420/270214589-0dc6dc04-bd5b-4c58-9055-6130f4cf3a59.png)](https://github-production-user-asset-6210df.s3.amazonaws.com/61207420/270204104-510cf61e-5705-4677-9322-8cca86526258.mp4)
+
+Alessandra Estephany Genocchio - Perto to alvo🎯
+![Captura de tela de 2023-09-26 01-49-01](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-b/assets/61207420/cc737a1e-9940-4982-a7f4-1b9c29d9d9a4)
 
 Lucas Rodrigo Leal Lopes - Duende Verde🎃
 ![LucasLealLopes](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-c/assets/61207420/afa216c3-570b-4346-b8a1-3d19786b75d4)
