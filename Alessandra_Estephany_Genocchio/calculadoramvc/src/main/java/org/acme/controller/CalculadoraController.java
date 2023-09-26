@@ -17,12 +17,14 @@ public class CalculadoraController {
     private final Template page;
 
     public CalculadoraController(Template page) {
+
         this.page = requireNonNull(page, "page is required");
     }
 
     @GET
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance get(@QueryParam("name") String name) {
+
         return page.data("name", name);
     }
 

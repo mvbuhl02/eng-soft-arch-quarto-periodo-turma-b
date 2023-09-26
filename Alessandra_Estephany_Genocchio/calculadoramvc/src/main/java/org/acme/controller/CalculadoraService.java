@@ -1,6 +1,6 @@
 package org.acme.controller;
 
-import org.jboss.resteasy.spi.BadRequestException;
+import jakarta.ws.rs.BadRequestException;
 
 public class CalculadoraService {
 
@@ -12,7 +12,7 @@ public class CalculadoraService {
             case "substracao":
                 return valor1 - valor2;
             case "divisao":
-                return  valor1 / valor2;
+                return  valor1 != 0 ? valor1 / valor2 : 0;
             case "multiplicacao":
                 return valor1 * valor2;
             default:
