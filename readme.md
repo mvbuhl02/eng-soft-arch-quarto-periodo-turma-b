@@ -2,7 +2,7 @@
 
 ### Destaques do Repo✨
 
-**Abaixo estão os 9 trabalhos de alunos que fizeram tanto um front quanto um back-end bonito.**
+**Abaixo estão os 8 trabalhos de alunos que fizeram tanto um front quanto um back-end bonito.**
 
 Gustavo Kraemer - Único que fez o desafio extra da persistência, maluco fez no postgres ainda🔥
 ![gustavo_kraemer](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-c/assets/61207420/2da51ac0-282f-4a10-acb1-7ff35d389825)
